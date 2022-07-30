@@ -1,0 +1,35 @@
+﻿@using Tech.Core.Concrete
+@using Tech.Core.Services
+
+@{
+	ViewData["Title"] = "Index";
+}
+@model List<IService>
+
+<table class="table table-striped">
+
+	<thead>
+		<tr>
+
+
+			<td>PostID</td>
+			<td>Title</td>
+			<td>Body</td>
+			<td>CreatedDate</td>
+
+		</tr>
+
+	</thead>
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr> 
+			<td>@item.PostId</td>
+			<td>@item.Title</td>
+			<td>@item.Body</td>
+			<td>@item.CreateDate</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
